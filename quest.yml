@@ -18,5 +18,7 @@ steps:
   - 06_update_readme
 level: intermediate
 type: PROMPT
-duration: 30
+duration: 0.5
+frameworks:
+  backend: null
 repository: https://github.com/trywilco/python-server

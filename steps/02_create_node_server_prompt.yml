@@ -26,21 +26,21 @@ With the server please include a simple Docker file to run it
               project using File > Open Folder. Feel free to create the project
               multiple times until it looks good.
           - text: |
-          The Docker file shuold looks like this:
-```
-FROM node:14
+            The Docker file shuold looks like this:
+            ```
+            FROM node:14
 
-WORKDIR /app
+            WORKDIR /app
 
-RUN npm install -g nodemon
-COPY package*.json ./
-RUN npm install
-COPY . .
-EXPOSE 8001
+            RUN npm install -g nodemon
+            COPY package*.json ./
+            RUN npm install
+            COPY . .
+            EXPOSE 8001
 
-CMD [ "nodemon", "src/app.js" ]
-```
-          - text: Let me know when you're ready to move on.
+            CMD [ "nodemon", "src/app.js" ]
+            ```
+            - text: Let me know when you're ready to move on.
     - actionId: ready_message
       params:
         person: lucca

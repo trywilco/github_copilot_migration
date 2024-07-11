@@ -1,0 +1,25 @@
+id: migrate_endpoints
+learningObjectives:
+  - Migrate node code using GitHub Copilot.
+hints:
+  - Understand the logic of the `/get_tasks` and `add_task` route in Python before migrating.
+  - Copy the Python code and ask Copilot to translate it to Node.js.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Sweet, we've got our Node server. Now, let's put Copilot to even better use.
+          - text: Use GitHub Copilot to migrate the endpoints from the Python server to our Node server.
+          - text: We can do it easily by giving copilot the code we want to migrate and ask them for help.
+          - text: Add the Python code you want to migrate [to the chat](https://code.visualstudio.com/docs/copilot/getting-started-chat#_add-chat-context) and ask Copilot to translate it to Node.js.
+          - text: Once the migration is complete, commit the changes and open a PR. Ness will be thrilled with our progress.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

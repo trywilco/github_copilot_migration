@@ -1,4 +1,4 @@
-id: 02_create_node_server_prompt
+id: create_node_server_prompt
 learningObjectives:
   - Create a basic Node.js server using GitHub Copilot.
 hints:
@@ -13,14 +13,18 @@ startFlow:
         messages:
           - text: Alright, the Python server is working. Now, let's use a bit of Copilot
               magic.
-          - text: "Open GitHub Copilot and use the '@workspace /new' option to create a new
-              project. We want a simple Node.js server with Express. Here's an
-              example prompt you can use: 'Create a new Node.js Express
-              server'."
+          - text: "Open GitHub Copilot and use the ' @workspace /new ' option to create a new
+              project and put it under a `node-server` folder. We want a simple Node.js server with Docker. Here's an
+              example prompt you can use: "
+          - text: |
+```
+@workspace /new Scaffold code for a simple epxress server that has no endpoints.
+The server should listen on port 3001.
+With the server please include a simple Docker file to run it
+```
           - text: Once the project is generated, you might need to go back to the original
               project using File > Open Folder. Feel free to create the project
-              multiple times until it looks good. Don't forget to add a
-              Dockerfile!
+              multiple times until it looks good.
     - actionId: ready_message
       params:
         person: lucca

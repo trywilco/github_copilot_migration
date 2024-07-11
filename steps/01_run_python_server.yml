@@ -1,4 +1,4 @@
-id: 01_run_python_server
+id: run_python_server
 learningObjectives:
   - Ensure the existing Python server is working correctly.
 hints:
@@ -16,7 +16,7 @@ startFlow:
           - text: First, grab the project and run the existing Python server to make sure
               it's working as expected. We need to understand the current setup
               before diving into changes.
-          - text: Add a task to verify everything works fine, and let me know when you're
+          - text: Try to get all tasks (via the `/get_tasks` endpoint`) to verify everything works fine, and let me know when you're
               ready.
     - actionId: ready_message
       params:

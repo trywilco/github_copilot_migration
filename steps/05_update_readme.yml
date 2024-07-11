@@ -1,4 +1,4 @@
-id: 06_update_readme
+id: update_readme
 learningObjectives:
   - Update the README file to include new Node.js server details.
 hints:
@@ -16,7 +16,7 @@ startFlow:
           - text: Select the text in the README and use [inline
               chat](https://code.visualstudio.com/docs/copilot/getting-started-chat#_stay-in-the-flow-with-inline-chat)
               to ask Copilot for updates. Once you're done, commit the changes
-              and open a final PR.
+              and open a final PR. Ness will likely throw a party with all this progress.
     - actionId: ready_message
       params:
         person: lucca

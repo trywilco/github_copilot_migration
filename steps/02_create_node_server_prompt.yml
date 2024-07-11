@@ -18,13 +18,29 @@ startFlow:
               example prompt you can use: "
           - text: |
 ```
-@workspace /new Scaffold code for a simple epxress server that has no endpoints.
+@workspace /new Scaffold code for a simple JS express server that has no endpoints.
 The server should listen on port 3001.
 With the server please include a simple Docker file to run it
 ```
           - text: Once the project is generated, you might need to go back to the original
               project using File > Open Folder. Feel free to create the project
               multiple times until it looks good.
+          - text: |
+          The Docker file shuold looks like this:
+```
+FROM node:14
+
+WORKDIR /app
+
+RUN npm install -g nodemon
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 8001
+
+CMD [ "nodemon", "src/app.js" ]
+```
+          - text: Let me know when you're ready to move on.
     - actionId: ready_message
       params:
         person: lucca

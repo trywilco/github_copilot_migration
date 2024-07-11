@@ -16,7 +16,7 @@ startFlow:
           - text: First, grab the project and run the existing Python server to make sure
               it's working as expected. We need to understand the current setup
               before diving into changes.
-          - text: Try to get all tasks (via the `/get_tasks` endpoint`) to verify everything works fine, and let me know when you're
+          - text: Try to get all tasks (via the `/tasks` endpoint`) to verify everything works fine, and let me know when you're
               ready.
     - actionId: ready_message
       params:

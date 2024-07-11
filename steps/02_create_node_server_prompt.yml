@@ -3,43 +3,37 @@ learningObjectives:
   - Create a basic Node.js server using GitHub Copilot.
 hints:
   - Ensure GitHub Copilot is enabled in your editor.
-  - Use the '@workspace /new' command to prompt Copilot to start a new Node.js
-    server template.
+  - Use the '@workspace /new' command to prompt Copilot to start a new Node.js server template.
 startFlow:
   do:
     - actionId: bot_message
       params:
         person: lucca
         messages:
-          - text: Alright, the Python server is working. Now, let's use a bit of Copilot
-              magic.
-          - text: "Open GitHub Copilot and use the ' @workspace /new ' option to create a new
-              project and put it under a `node-server` folder. We want a simple Node.js server with Docker. Here's an
-              example prompt you can use: "
+          - text: Alright, the Python server is working. Now, let's use a bit of Copilot magic.
+          - text: "Open GitHub Copilot and use the '@workspace /new' option to create a new project and put it under a `node-server` folder. We want a simple Node.js server with Docker. Here's an example prompt you can use:"
           - text: |
-```
-@workspace /new Scaffold code for a simple JS express server that has no endpoints.
-The server should listen on port 3001.
-With the server please include a simple Docker file to run it
-```
-          - text: Once the project is generated, you might need to go back to the original
-              project using File > Open Folder. Feel free to create the project
-              multiple times until it looks good.
+              ```
+              @workspace /new Scaffold code for a simple JS express server that has no endpoints.
+              The server should listen on port 3001.
+              With the server please include a simple Docker file to run it
+              ```
+          - text: Once the project is generated, you might need to go back to the original project using File > Open Folder. Feel free to create the project multiple times until it looks good.
           - text: |
-            The Docker file should look like this:
-            ```
-            FROM node:14
+              The Docker file should look like this:
+              ```
+              FROM node:14
 
-            WORKDIR /app
+              WORKDIR /app
 
-            RUN npm install -g nodemon
-            COPY package*.json ./
-            RUN npm install
-            COPY . .
-            EXPOSE 8001
+              RUN npm install -g nodemon
+              COPY package*.json ./
+              RUN npm install
+              COPY . .
+              EXPOSE 8001
 
-            CMD [ "nodemon", "src/app.js" ]
-            ```
+              CMD [ "nodemon", "src/app.js" ]
+              ```
           - text: Let me know when you're ready to move on.
     - actionId: ready_message
       params:

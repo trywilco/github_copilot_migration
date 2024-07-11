@@ -1,4 +1,4 @@
-id: migrate_add_task
+id: 04_migrate_add_task
 learningObjectives:
   - Migrate the '/add_task' route to the Node.js server.
 hints:

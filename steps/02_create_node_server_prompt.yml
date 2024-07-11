@@ -1,4 +1,4 @@
-id: create_node_server_prompt
+id: 02_create_node_server_prompt
 learningObjectives:
   - Create a basic Node.js server using GitHub Copilot.
 hints:

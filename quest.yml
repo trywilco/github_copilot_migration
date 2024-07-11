@@ -10,12 +10,12 @@ skills:
   - git
   - documentation
 steps:
-  - 01_run_python_server
-  - 02_create_node_server_prompt
-  - 03_run_both_servers
-  - 04_migrate_get_tasks
-  - 05_migrate_add_task
-  - 06_update_readme
+  - run_python_server
+  - create_node_server_prompt
+  - run_both_servers
+  - migrate_get_tasks
+  - migrate_add_task
+  - update_readme
 level: intermediate
 type: PROMPT
 duration: 0.5

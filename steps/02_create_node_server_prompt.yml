@@ -26,7 +26,7 @@ With the server please include a simple Docker file to run it
               project using File > Open Folder. Feel free to create the project
               multiple times until it looks good.
           - text: |
-            The Docker file shuold looks like this:
+            The Docker file should look like this:
             ```
             FROM node:14
 
@@ -40,7 +40,7 @@ With the server please include a simple Docker file to run it
 
             CMD [ "nodemon", "src/app.js" ]
             ```
-            - text: Let me know when you're ready to move on.
+          - text: Let me know when you're ready to move on.
     - actionId: ready_message
       params:
         person: lucca

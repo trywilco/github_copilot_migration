@@ -1,0 +1,26 @@
+id: run_both_servers
+learningObjectives:
+  - Ensure both the Python and Node.js servers run together using Docker.
+hints:
+  - Update the docker-compose.yml to include the Node.js service.
+  - Set the correct ports for the Node.js server.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Next, let's make sure both servers can run together.
+          - text: Edit the docker-compose file to run the Python server and the new Node
+              server (Node on port 3001). This should allow us to see if
+              everything is working in harmony.
+          - text: If all is well, create a PR with these changes. This was once a nightmare
+              without Copilot, but look at us now!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

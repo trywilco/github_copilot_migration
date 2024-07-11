@@ -1,0 +1,28 @@
+id: run_python_server
+learningObjectives:
+  - Ensure the existing Python server is working correctly.
+hints:
+  - Follow the instructions in the README to set up and run the server.
+  - Test the API endpoints to verify the server's functionality.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Hey, it's Lucca here. So, Ness wants us to migrate our Python server into
+              Node.js. Why? She says Node.js is faster, more scalable, and
+              better suited for our evolving needs, not sure I completly agree but ok...
+          - text: First, grab the project and run the existing Python server to make sure
+              it's working as expected. We need to understand the current setup
+              before diving into changes.
+          - text: Add a task to verify everything works fine, and let me know when you're
+              ready.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

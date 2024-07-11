@@ -1,0 +1,28 @@
+id: migrate_add_task
+learningObjectives:
+  - Migrate the '/add_task' route to the Node.js server.
+hints:
+  - Check how the '/add_task' route is implemented in Python.
+  - Translate the logic into an Express route in your Node.js server.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Great job on the '/get_tasks' route! Now let's tackle the '/add_task'
+              route.
+          - text: Once again, employ the power of GitHub Copilot to make this migration
+              smoother and quicker.
+          - text: Migrate the '/add_task' functionality similarly by copying the Python code
+              and instructing Copilot to rewrite it in Node.js. When this route
+              is re-implemented, commit the code and open another PR. Ness will
+              likely throw a party with all this progress.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

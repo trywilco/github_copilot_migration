@@ -19,5 +19,6 @@ level: intermediate
 type: PROMPT
 duration: 0.5
 frameworks:
-  backend: null
+  backend: 
+  - python
 repository: https://github.com/trywilco/python-server

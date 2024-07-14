@@ -32,7 +32,7 @@ startFlow:
 
               CMD [ "yarn", "start" ]
               ```
-          - text: Let me know when you managed to craete the node files.
+          - text: Let me know when you managed to create the node files.
     - actionId: ready_message
       params:
         person: lucca

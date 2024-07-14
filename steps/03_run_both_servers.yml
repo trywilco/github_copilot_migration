@@ -14,7 +14,7 @@ startFlow:
           - text: Edit the docker-compose file to run the Python server and the new Node
               server (Node on port 3001). This should allow us to see if
               everything is working in harmony.
-          - text: Here's a snippet you can use to add the Node.js service to the `docker-compose.yml` file:
+          - text: "Here's a snippet you can use to add the Node.js service to the `docker-compose.yml` file:"
           - text: |
               ```
               node-server:

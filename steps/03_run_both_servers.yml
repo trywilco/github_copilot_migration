@@ -24,7 +24,7 @@ startFlow:
                 ports:
                   - 8001:8001
                 volumes:
-                  - ./node-server:/app
+                  - ./node-server/src:/app/src
               ```
           - text: If all is well, create a PR with these changes. This was once a nightmare
               without Copilot, but look at us now!

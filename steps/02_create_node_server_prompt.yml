@@ -15,7 +15,7 @@ startFlow:
           - text: |
               ```
               @workspace /new Scaffold code for a simple JS express server that has no endpoints.
-              The server should listen on port 3001.
+              The server should listen on port 8001, and use nodedemon so everychange in the code will reflect in `yarn start`.
               With the server please include a simple Docker file to run it
               ```
           - text: Once the project is generated, you might need to go back to the original project using File > Open Folder. Feel free to create the project multiple times until it looks good.
@@ -26,15 +26,13 @@ startFlow:
 
               WORKDIR /app
 
-              RUN npm install -g nodemon
-              COPY package*.json ./
-              RUN npm install
-              COPY . .
+              COPY package*.json /app
+              RUN yarn install
               EXPOSE 8001
 
-              CMD [ "nodemon", "src/app.js" ]
+              CMD [ "yarn", "start" ]
               ```
-          - text: Let me know when you're ready to move on.
+          - text: Let me know when you managed to craete the node files.
     - actionId: ready_message
       params:
         person: lucca

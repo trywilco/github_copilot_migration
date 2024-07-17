@@ -1,7 +1,7 @@
 id: migrate_endpoints
 learningObjectives:
   - Migrate node code using GitHub Copilot.
-  - Adding context to GitHub Copilot chat.
+  - Add context to GitHub Copilot chat.
 hints:
   - Understand the logic of the `/get_tasks` and `/add_task` routes in Python before migrating.
   - Copy the Python code and ask Copilot to translate it to Node.js.
@@ -54,4 +54,4 @@ trigger:
           - actionId: github_pr_reject
             params:
               person: lucca
-              message: "I'm sorry, but I can't approve this PR, I found some issues when testing the endpoints, I added a new task to the list and it's not showing up when I try to get all tasks."
+              message: "I'm sorry, but I can't approve this PR because I found some issues when testing the endpoints. I added a new task to the list and it's not showing up when I try to get all tasks."

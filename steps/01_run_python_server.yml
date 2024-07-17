@@ -1,6 +1,5 @@
 id: run_python_server
 learningObjectives:
-  - Ensure the existing Python server is working correctly.
 hints:
   - Follow the instructions in the README to set up and run the server.
   - Test the API endpoints to verify the server's functionality.

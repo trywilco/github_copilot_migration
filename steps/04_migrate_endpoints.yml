@@ -16,11 +16,42 @@ startFlow:
           - text: We can do it easily by giving copilot the code we want to migrate and ask them for help.
           - text: Add the Python code you want to migrate [to the chat](https://code.visualstudio.com/docs/copilot/getting-started-chat#_add-chat-context) and ask Copilot to translate it to Node.js.
           - text: Once the migration is complete, commit the changes and open a PR. Ness will be thrilled with our progress.
-    - actionId: ready_message
-      params:
-        person: lucca
+
+githubActions:
+  commands:
+    - cmd: docker compose up -d
+    - cmd: sleep 5
+    - cmd: |
+        curl -X POST -H "Content-Type: application/json" -d '{"text": "New task"}' http://localhost:8001/tasks
+    - cmd: |
+        curl localhost:8001/tasks | grep "New task"
+
 trigger:
-  type: user_ready_response
+  type: github_pr_lifecycle_status
   flowNode:
-    do:
-      - actionId: finish_step
+    switch:
+      key: "${eventType}"
+      cases:
+        github_pr_opened:
+          do:
+          - actionId: github_pr_comment
+            params:
+              person: lucca
+              message: "Got it! Let me review the changes and get back to you."
+        github_pr_workflow_complete_success:
+          do:
+          - actionId: bot_message
+            params:
+              person: lucca
+              messages:
+              - text: "Good job, you can now merge the PR."
+          - actionId: github_pr_approve
+            params:
+              person: lucca
+              message: "Good job, you can now merge the PR."
+        github_pr_workflow_complete_failure:
+          do:
+          - actionId: github_pr_reject
+            params:
+              person: lucca
+              message: "I'm sorry, but I can't approve this PR, I found some issues when testing the endpoints."

@@ -33,6 +33,7 @@ githubActions:
     - cmd: docker compose up -d
     - cmd: sleep 5
     - cmd: curl localhost:8001
+    - cmd: curl localhost:8000
 
 trigger:
   type: github_pr_lifecycle_status
@@ -62,7 +63,7 @@ trigger:
           - actionId: github_pr_reject
             params:
               person: lucca
-              message: "Weird, I tried to run the node server using `docker compose up` but couldn't find anything on port 8001, are you sure it works for you?"
+              message: "Weird, I tried to run the servers using `docker compose up` but couldn't find anything on port 8000 or 8001, are you sure it works for you?"
         github_pr_merged:
           do:
           - actionId: finish_step

@@ -18,19 +18,56 @@ startFlow:
               chat](https://code.visualstudio.com/docs/copilot/getting-started-chat#_stay-in-the-flow-with-inline-chat)
               to ask Copilot for updates. Once you're done, commit the changes
               and open a final PR. Ness will likely throw a party with all this progress.
-    - actionId: ready_message
-      params:
-        person: lucca
+
 trigger:
-  type: user_ready_response
+  type: github_pr_lifecycle_status
   flowNode:
-    do:
-      - actionId: bot_message
-        params:
-          person: lucca
-          messages:
-            - text: Congratulations, you've successfully migrated the Python server to Node
-                using GitHub Copilot! We've upgraded our tech stack and now have
-                a Node server handling our tasks. Ness is going to be thrilled.
-                Great job!
-      - actionId: finish_step
+    switch:
+      key: "${eventType}"
+      cases:
+        github_pr_workflow_complete_success:
+          if:
+            conditions:
+              - conditionId: github_does_file_contain
+                params:
+                  fileName: readme.md
+                  regex: 8001
+              - conditionId: github_does_file_contain
+                params:
+                  fileName: readme.md
+                  regex: node
+                  flags: i
+            then:
+              do:
+                - actionId: github_pr_approve
+                  params:
+                    person: lucca
+                    message: "Nice work! Now you can merge it."
+                - actionId: bot_message
+                  params:
+                    person: lucca
+                    messages:
+                      - text: "Nice work! Now you can merge it."
+            else:
+              do:
+                - actionId: github_pr_reject
+                  params:
+                    person: lucca
+                    message: "Are you sure you changed the readme file and explained that the node server is running on port 8001?"
+                - actionId: bot_message
+                  params:
+                    person: lucca
+                    messages:
+                      - text: "Are you sure you changed the readme file and explained that the node server is running on port 8001?"
+
+        github_pr_merged:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                - text: Congratulations, you've successfully migrated the Python server to Node
+                    using GitHub Copilot! We've upgraded our tech stack and now have
+                    a Node server handling our tasks. Ness is going to be thrilled.
+                    Great job!
+            - actionId: finish_step

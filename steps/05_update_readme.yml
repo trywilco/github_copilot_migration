@@ -31,7 +31,7 @@ trigger:
               - conditionId: github_does_file_contain
                 params:
                   fileName: readme.md
-                  regex: 8001
+                  regex: "8001"
               - conditionId: github_does_file_contain
                 params:
                   fileName: readme.md

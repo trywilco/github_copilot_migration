@@ -24,7 +24,7 @@ githubActions:
     - cmd: |
         curl -X POST -H "Content-Type: application/json" -d "{\"text\": \"New task\"}" http://localhost:8001/tasks
     - cmd: |
-        curl localhost:8001/tasks | grep "New task"
+         /bin/bash -c "curl localhost:8001/tasks | grep \"New task\""
 
 trigger:
   type: github_pr_lifecycle_status

@@ -1,8 +1,9 @@
 id: migrate_endpoints
 learningObjectives:
   - Migrate node code using GitHub Copilot.
+  - Adding context to GitHub Copilot chat.
 hints:
-  - Understand the logic of the `/get_tasks` and `add_task` route in Python before migrating.
+  - Understand the logic of the `/get_tasks` and `/add_task` routes in Python before migrating.
   - Copy the Python code and ask Copilot to translate it to Node.js.
 startFlow:
   do:

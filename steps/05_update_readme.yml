@@ -1,6 +1,7 @@
 id: update_readme
 learningObjectives:
   - Update the README file to include new Node.js server details.
+  - Using inline chat.
 hints:
   - Use GitHub Copilot's inline chat to update the README.
   - Ensure the README accurately reflects the changes made.

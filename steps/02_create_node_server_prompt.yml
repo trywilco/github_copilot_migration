@@ -1,6 +1,6 @@
 id: create_node_server_prompt
 learningObjectives:
-  - Create a basic Node.js server using GitHub Copilot.
+  - Create a new project using GitHub Copilot.
 hints:
   - Ensure GitHub Copilot is enabled in your editor.
   - Use the '@workspace /new' command to prompt Copilot to start a new Node.js server template.

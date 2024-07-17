@@ -15,7 +15,7 @@ startFlow:
           - text: First, grab the project and run the existing Python server to make sure
               it's working as expected. We need to understand the current setup
               before diving into changes.
-          - text: Try to get all tasks (via the `/tasks` endpoint`) to verify everything works fine, and let me know what's the second task in the list.
+          - text: Try to get all tasks (via the `/tasks` endpoint`) to verify everything is working fine, and let me know what's the second task in the list.
 trigger:
   type: user_message
   params:

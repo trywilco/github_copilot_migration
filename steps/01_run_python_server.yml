@@ -15,13 +15,29 @@ startFlow:
           - text: First, grab the project and run the existing Python server to make sure
               it's working as expected. We need to understand the current setup
               before diving into changes.
-          - text: Try to get all tasks (via the `/tasks` endpoint`) to verify everything works fine, and let me know when you're
-              ready.
-    - actionId: ready_message
-      params:
-        person: lucca
+          - text: Try to get all tasks (via the `/tasks` endpoint`) to verify everything works fine, and let me know what's the second task in the list.
 trigger:
-  type: user_ready_response
+  type: user_message
+  params:
+    person: lucca
   flowNode:
-    do:
+    if:
+      conditions:
+      - conditionId: text_match_regex
+        params:
+          text: "${userMessageText}"
+          regex: "/Create a time machine from a cardboard box/i"
+      then:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: "Oh right, I remember that one! I'll mark this step as complete."
       - actionId: finish_step
+      else:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: "Are you sure? This is not what I remember. Try again."
+        

@@ -15,7 +15,7 @@ startFlow:
           - text: |
               ```
               @workspace /new Scaffold code for a simple JS express server that has no endpoints.
-              The server should listen on port 8001, and use nodedemon so everychange in the code will reflect in `yarn start`.
+              The server should listen on port 8001, and use nodemon so everychange in the code will reflect in `yarn start`.
               With the server please include a simple Docker file to run it
               ```
           - text: Once the project is generated, you might need to go back to the original project using File > Open Folder. Feel free to create the project multiple times until it looks good.

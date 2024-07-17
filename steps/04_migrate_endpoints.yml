@@ -22,7 +22,7 @@ githubActions:
     - cmd: docker compose up -d
     - cmd: sleep 5
     - cmd: |
-        curl -X POST -H "Content-Type: application/json" -d '{"text": "New task"}' http://localhost:8001/tasks
+        curl -X POST -H "Content-Type: application/json" -d "{\"text\": \"New task\"}" http://localhost:8001/tasks
     - cmd: |
         curl localhost:8001/tasks | grep "New task"
 

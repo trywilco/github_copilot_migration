@@ -31,9 +31,7 @@ startFlow:
 githubActions:
   commands:
     - cmd: docker compose up -d
-    - cmd: curl https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh --output wait-for-it.sh
-    - cmd: chmod +x wait-for-it.sh
-    - cmd: ./wait-for-it.sh localhost:8001 --timeout=30
+    - cmd: curl localhost:8001
 
 trigger:
   type: github_pr_lifecycle_status

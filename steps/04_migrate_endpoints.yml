@@ -54,4 +54,4 @@ trigger:
           - actionId: github_pr_reject
             params:
               person: lucca
-              message: "I'm sorry, but I can't approve this PR, I found some issues when testing the endpoints."
+              message: "I'm sorry, but I can't approve this PR, I found some issues when testing the endpoints, I added a new task to the list and it's not showing up when I try to get all tasks."

@@ -28,16 +28,18 @@ trigger:
           text: "${userMessageText}"
           regex: "/Create a time machine from a cardboard box/i"
       then:
-      - actionId: bot_message
-        params:
-          person: lucca
-          messages:
-            - text: "Oh right, I remember that one! I'll mark this step as complete."
-      - actionId: finish_step
+        do:
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+              - text: "Oh right, I remember that one! I'll mark this step as complete."
+        - actionId: finish_step
       else:
-      - actionId: bot_message
-        params:
-          person: lucca
-          messages:
-            - text: "Are you sure? This is not what I remember. Try again."
+        do:
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+              - text: "Are you sure? This is not what I remember. Try again."
         

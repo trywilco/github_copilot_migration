@@ -31,6 +31,7 @@ startFlow:
 githubActions:
   commands:
     - cmd: docker compose up -d
+    - cmd: sleep 5
     - cmd: curl localhost:8001
 
 trigger:

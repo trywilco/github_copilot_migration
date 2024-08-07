@@ -1,5 +1,6 @@
 id: run_python_server
 learningObjectives:
+  - Run Python server
 hints:
   - Follow the instructions in the README to set up and run the server.
   - Test the API endpoints to verify the server's functionality.

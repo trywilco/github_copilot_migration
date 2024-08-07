@@ -1,5 +1,6 @@
 id: run_both_servers
 learningObjectives:
+  - Run both servers
 hints:
   - Update the docker-compose.yml to include the Node.js service.
   - Set the correct ports for the Node.js server.

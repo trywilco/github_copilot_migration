@@ -12,6 +12,7 @@ startFlow:
         person: lucca
         messages:
           - text: Sweet, we've got our Node server. Now, let's put Copilot to even better use.
+          - text: Before you start, make sure to create a new branch for your changes.
           - text: Use GitHub Copilot chat to migrate the endpoints from the Python server to our Node server.
           - text: We can do it easily by giving copilot the code we want to migrate and ask them for help.
           - text: Add the Python code you want to migrate [to the chat](https://code.visualstudio.com/docs/copilot/getting-started-chat#_add-chat-context) and ask Copilot to translate it to Node.js.

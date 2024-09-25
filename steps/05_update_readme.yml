@@ -12,7 +12,8 @@ startFlow:
         person: lucca
         messages:
           - text: We're almost there. Just one last task before we wrap up.
-          - text: Let's update the README file to reflect our new Node.js server and the
+          - text:
+              Let's update the README file to reflect our new Node.js server and the
               migration details. Thankfully, Copilot can help with this too.
           - text: Make sure to create a new branch for these changes.
           - text: Select the text in the README and use [inline
@@ -26,6 +27,12 @@ trigger:
     switch:
       key: "${eventType}"
       cases:
+        github_pr_opened:
+          do:
+            - actionId: github_pr_comment
+              params:
+                person: lucca
+                message: Awesome! We're going to review your PR right away.
         github_pr_workflow_complete_success:
           if:
             conditions:
@@ -67,8 +74,9 @@ trigger:
               params:
                 person: lucca
                 messages:
-                - text: Congratulations, you've successfully migrated the Python server to Node
-                    using GitHub Copilot! We've upgraded our tech stack and now have
-                    a Node server handling our tasks. Ness is going to be thrilled.
-                    Great job!
+                  - text:
+                      Congratulations, you've successfully migrated the Python server to Node
+                      using GitHub Copilot! We've upgraded our tech stack and now have
+                      a Node server handling our tasks. Ness is going to be thrilled.
+                      Great job!
             - actionId: finish_step

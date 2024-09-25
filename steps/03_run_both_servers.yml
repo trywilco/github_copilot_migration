@@ -11,22 +11,16 @@ startFlow:
         person: lucca
         messages:
           - text: Next, let's make sure both servers can run together.
-          - text: Edit the docker-compose file to run the Python server and the new Node
-              server (Node on port 3001). This should allow us to see if
-              everything is working in harmony.
-          - text: "Here's a snippet you can use to add the Node.js service to the `docker-compose.yml` file:"
+          - text:
+              We need to edit the docker-compose file to run the Python server and the new Node
+              server (Node on port 8001). This should allow us to see if everything is working in harmony.
+          - text: "We can use GitHub Copilot to help us with this task too:"
           - text: |
               ```
-              node-server:
-                build:
-                  context: ./node-server
-                  dockerfile: Dockerfile
-                ports:
-                  - 8001:8001
-                volumes:
-                  - ./node-server/src:/app/src
+              @workspace modify the commands to run both servers, the Python app (on port 8000) and the Node app (on port 8001) in the #file:docker-compose.yml 
               ```
-          - text: If all is well, create a PR with these changes. This was once a nightmare
+          - text:
+              If all is well, :instruction[create a PR with these changes.] This was once a nightmare
               without Copilot, but look at us now!
 
 githubActions:
@@ -44,27 +38,27 @@ trigger:
       cases:
         github_pr_opened:
           do:
-          - actionId: github_pr_comment
-            params:
-              person: lucca
-              message: "On it, I'll review the changes right away."
+            - actionId: github_pr_comment
+              params:
+                person: lucca
+                message: "On it, I'll review the changes right away."
         github_pr_workflow_complete_success:
           do:
-          - actionId: bot_message
-            params:
-              person: lucca
-              messages:
-              - text: "Nailed it! Excellent job! You can now merge the PR."
-          - actionId: github_pr_approve
-            params:
-              person: lucca
-              message: "Nailed it! Excellent job! You can now merge the PR."
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: "Nailed it! Excellent job! You can now merge the PR."
+            - actionId: github_pr_approve
+              params:
+                person: lucca
+                message: "Nailed it! Excellent job! You can now merge the PR."
         github_pr_workflow_complete_failure:
           do:
-          - actionId: github_pr_reject
-            params:
-              person: lucca
-              message: "Weird, I tried to run the servers using `docker compose up` but couldn't find anything on port 8000 or 8001, are you sure it's working for you?"
+            - actionId: github_pr_reject
+              params:
+                person: lucca
+                message: "Weird, I tried to run the servers using `docker compose up` but couldn't find anything on port 8000 or 8001. Are you sure it's working for you?"
         github_pr_merged:
           do:
-          - actionId: finish_step
+            - actionId: finish_step

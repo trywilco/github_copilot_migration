@@ -16,7 +16,7 @@ startFlow:
           - text: Use GitHub Copilot chat to migrate the endpoints from the Python server to our Node server.
           - text: We can do it easily by giving copilot the code we want to migrate and ask them for help.
           - text: Add the Python code you want to migrate [to the chat](https://code.visualstudio.com/docs/copilot/getting-started-chat#_add-chat-context) and ask Copilot to translate it to Node.js.
-          - text: Once the migration is complete, commit the changes and open a PR. Ness will be thrilled with our progress.
+          - text: Once the migration is complete, :instruction[create a new branch and open a PR with your changes, and I'll review it].
 
 githubActions:
   commands:

@@ -11,6 +11,7 @@ skills:
   - documentation
 steps:
   - run_python_server
+  - create_new_branch
   - create_node_server_prompt
   - run_both_servers
   - migrate_endpoints

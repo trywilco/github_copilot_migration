@@ -15,12 +15,9 @@ startFlow:
           - text:
               Let's update the README file to reflect our new Node.js server and the
               migration details. Thankfully, Copilot can help with this too.
-          - text: Make sure to create a new branch for these changes.
           - text: Select the text in the README and use [inline
               chat](https://code.visualstudio.com/docs/copilot/getting-started-chat#_stay-in-the-flow-with-inline-chat)
-              to ask Copilot for updates. Once you're done, commit the changes
-              and open a final PR. Ness will likely throw a party with all this progress.
-
+              to ask Copilot for updates. Once you're done, :instruction[create a new branch and open a PR with your changes for review].
 trigger:
   type: github_pr_lifecycle_status
   flowNode:

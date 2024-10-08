@@ -19,9 +19,7 @@ startFlow:
               ```
               @workspace modify the commands to run both servers, the Python app (on port 8000) and the Node app (on port 8001) in the #file:docker-compose.yml 
               ```
-          - text:
-              If all is well, :instruction[create a PR with these changes.] This was once a nightmare
-              without Copilot, but look at us now!
+          - text: If all is well, :instruction[create a new branch and open a PR with your changes, and I'll review it.] This was once a nightmare without Copilot, but look at us now!
 
 githubActions:
   commands:

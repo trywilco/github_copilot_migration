@@ -15,6 +15,7 @@ startFlow:
               We need to edit the docker-compose file to run the Python server and the new Node
               server (Node on port 8001). This should allow us to see if everything is working in harmony.
           - text: "We can use GitHub Copilot to help us with this task too:"
+          - text: "![](${copiloticon.png})"
           - text: |
               ```
               @workspace modify the commands to run both servers, the Python app (on port 8000) and the Node app (on port 8001) in the #file:docker-compose.yml 

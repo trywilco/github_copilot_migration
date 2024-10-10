@@ -12,12 +12,14 @@ startFlow:
         messages:
           - text: Alright, the Python server is working. Now, let's use a bit of Copilot magic.
           - text: "Then, open GitHub Copilot chat and use the '@workspace /new' option to create a new project and put it under a `node-server` folder. We want a simple Node.js server with Docker. Here's an example prompt you can use:"
+          - text: "![](${copiloticon.png})"
           - text: |
               ```
               @workspace /new Scaffold code for a simple JS express server that has no endpoints.
               The server should listen on port 8001, and use nodemon so everychange in the code will reflect in `yarn start`.
               With the server please include a simple Docker file to run it
               ```
+          - text: "![](${copilotchatworkspace.png})"
           - text: |
               Then 
               ```

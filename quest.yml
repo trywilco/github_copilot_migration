@@ -23,3 +23,6 @@ frameworks:
   backend: 
   - python
 repository: https://github.com/trywilco/python-server
+sidebarTools:
+  - name: GitHub Universe FAQ
+    link: https://trywilco.notion.site/GitHub-Universe-FAQ-11ac0eacc16280cca15de0b1518fa087

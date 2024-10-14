@@ -18,7 +18,7 @@ steps:
   - update_readme
 level: intermediate
 type: PROMPT
-duration: 0.5
+duration: 1
 frameworks:
   backend: 
   - python

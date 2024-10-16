@@ -19,11 +19,6 @@ startFlow:
               With the server please include a simple Docker file to run it
               ```
           - text: "![](${copilotchatworkspace.png})"
-          - text: |
-              Then 
-              ```
-              @workspace /new In this new server, create a Dockerfile to run it
-              ```
           - text: After running the prompt, make sure to click the "Create Workspace" button to finalize the creation of the new workspace.
           - text: Once the project is generated, you might need to go back to the original project using File > Open Folder. Feel free to create the project multiple times until it looks good.
           - text: |

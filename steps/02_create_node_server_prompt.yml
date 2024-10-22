@@ -34,6 +34,8 @@ startFlow:
 
               CMD [ "yarn", "start" ]
               ```
+          - text: "Your workspace should look something like this:"
+          - text: "![](${file-structure.png})"
           - text: Let me know when you managed to create the node files.
     - actionId: ready_message
       params:

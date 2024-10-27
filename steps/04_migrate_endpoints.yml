@@ -50,6 +50,7 @@ trigger:
             params:
               person: lucca
               message: "Good job, you can now merge the PR."
+          - actionId: finish_step
         github_pr_workflow_complete_failure:
           do:
           - actionId: github_pr_reject

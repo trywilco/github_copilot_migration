@@ -78,4 +78,9 @@ trigger:
                       using GitHub Copilot! We've upgraded our tech stack and now have
                       a Node server handling our tasks. Ness is going to be thrilled.
                       Great job!
+                  - text: "You've just completed the Transform Your Code: GitHub Copilot Magic quest—great job! In this quest, you saw how GitHub Copilot can refactor, debug, and enhance existing code, essentially working its “magic” to improve code quality and efficiency."
+                  - text: "Next, to strengthen your skills and apply them more confidently, here's a personalized learning path:"
+                  - text: "👉 GitHub Skills: [Expand your team with Copilot coding agent](https://github.com/skills/expand-your-team-with-copilot) — practice the next logical GitHub skill."
+                  - text: "👉 Microsoft Learn: [Implement code improvements using GitHub Copilot tools](https://learn.microsoft.com/en-us/training/modules/implement-code-improvements-using-github-copilot-tools/) — deepen your conceptual understanding."
+                  - text: "👉 Microsoft Applied Skills: Accelerate app development by using GitHub Copilot Microsoft Applied Skills Credential [learn.microsoft.com](https://learn.microsoft.com/en-us/credentials/applied-skills/accelerate-app-development-by-using-github-copilot/) — earn a credential that shows what you've learned."
             - actionId: finish_step

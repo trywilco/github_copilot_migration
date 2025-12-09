@@ -77,6 +77,6 @@ trigger:
                   - text: "You've just completed the Transform Your Code: GitHub Copilot Magic quest—great job! This experience showed how GitHub Copilot can refactor, debug, and enhance existing code—essentially working its “magic” to improve code quality and developer efficiency."
                   - text: "🧠 What's Next?"
                   - text: "To strengthen your skills and validate your expertise, pursue the official:"
-                  - text: "👉 [GitHub Copilot Certification](https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/)"
+                  - text: "👉 [GitHub Copilot Certification](https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/?wt.mc_id=transformmagic_wilcotransformmagic_webpage_cnl)"
                   - text: "Earn a verified credential from GitHub that demonstrates your ability to integrate GitHub Copilot into real-world development workflows. This certification page provides direct access to the required learning paths, skills modules, and the certification exam."
             - actionId: finish_step
